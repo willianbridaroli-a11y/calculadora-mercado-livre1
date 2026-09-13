@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #f7f8fa;
+    color: #17191c;
+    min-height: 100vh;
+    padding: 48px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 750;
+    letter-spacing: -1px;
+    color: #15171a;
+    margin-bottom: 9px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #737980;
+    margin-bottom: 34px;
+}
+
+
+/* ==============================
+   CARDS
+============================== */
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e9ebee;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.02),
+        0 6px 20px rgba(0, 0, 0, 0.035);
+}
+
+.card h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #24272b;
+    margin-bottom: 23px;
+}
+
+
+/* ==============================
+   CAMPOS
+============================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4c5259;
+}
+
+.campo input {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 13px;
+
+    background: #fafbfc;
+    border: 1px solid #dfe2e6;
+    border-radius: 9px;
+
+    color: #17191c;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.campo input:hover {
+    background: #ffffff;
+    border-color: #c9cdd2;
+}
+
+.campo input:focus {
+    background: #ffffff;
+    border-color: #3483fa;
+
+    box-shadow:
+        0 0 0 3px rgba(52, 131, 250, 0.10);
+}
+
+.campo input::placeholder {
+    color: #a2a7ad;
+}
+
+
+/* ==============================
+   BOTÃO
+============================== */
+
+button {
+    width: 100%;
+    height: 50px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: #3483fa;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    margin: 3px 0 30px;
+
+    box-shadow:
+        0 4px 10px rgba(52, 131, 250, 0.18);
+
+    transition:
+        background 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+button:hover {
+    background: #2874e8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px rgba(52, 131, 250, 0.22);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ==============================
+   RESULTADOS
+============================== */
+
+.resultados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.resultado {
+    background: #ffffff;
+
+    border: 1px solid #e9ebee;
+    border-radius: 14px;
+
+    min-height: 105px;
+    padding: 21px 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 7px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.025);
+}
+
+.resultado span {
+    color: #7b8188;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.resultado strong {
+    color: #202328;
+    font-size: 23px;
+    font-weight: 750;
+    letter-spacing: -0.4px;
+}
+
+
+/* ==============================
+   PREÇO IDEAL
+============================== */
+
+.resultado.principal {
+    grid-column: span 2;
+
+    min-height: 150px;
+
+    padding: 28px;
+
+    background: #f0f6ff;
+
+    border: 1px solid #dceaff;
+
+    box-shadow: none;
+}
+
+.resultado.principal span {
+    color: #4c75aa;
+    font-size: 13px;
+}
+
+.resultado.principal strong {
+    color: #2167c7;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+
+/* ==============================
+   DESTAQUES
+============================== */
+
+#precoRealResultado {
+    color: #202328;
+}
+
+#diferencaPreco {
+    color: #21834a;
+}
+
+#lucro,
+#lucroTotal,
+#roiReal,
+#margemReal {
+    color: #21834a;
+}
+
+
+/* ==============================
+   AVISO
+============================== */
+
+.aviso {
+    margin-top: 24px;
+    padding: 16px 18px;
+
+    background: #fff8e6;
+    border: 1px solid #f1dfad;
+    border-radius: 12px;
+
+    color: #6f5a25;
+    font-size: 13px;
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+.aviso strong {
+    font-weight: 700;
+    color: #5d4918;
+}
+
+
+/* ==============================
+   RODAPÉ
+============================== */
+
+.rodape {
+    margin-top: 18px;
+    padding: 12px 0 2px;
+
+    text-align: center;
+
+    color: #a0a4a9;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.rodape a {
+    color: #8b9198;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: color 0.18s ease;
+}
+
+.rodape a:hover {
+    color: #3483fa;
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        padding: 21px;
+        border-radius: 14px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .resultados {
+        grid-template-columns: 1fr;
+    }
+
+    .resultado.principal {
+        grid-column: span 1;
+        min-height: 130px;
+    }
+
+    .resultado.principal strong {
+        font-size: 32px;
+    }
+}
+
+
+/* ==============================
+   CELULARES PEQUENOS
+============================== */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 22px 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .resultado {
+        padding: 19px;
+    }
+
+    .resultado.principal {
+        padding: 22px;
+    }
+
+    .resultado.principal strong {
+        font-size: 29px;
+    }
+
+    .aviso {
+        font-size: 12px;
+        padding: 14px 15px;
+    }
+
+    .rodape {
+        font-size: 9px;
+        margin-top: 14px;
+        padding-top: 10px;
+    }
+}
+.logo {
+    display: block;
+    width: 160px;
+    height: auto;
+    margin: 0 auto 20px;
+}
