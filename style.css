@@ -6,10 +6,11 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: #f7f8fa;
+    background: #faf9fc;
     color: #17191c;
     min-height: 100vh;
-    padding: 48px 20px;
+    padding: 42px 20px;
+
 }
 
 .container {
@@ -28,7 +29,7 @@ h1 {
     line-height: 1.15;
     font-weight: 750;
     letter-spacing: -1px;
-    color: #15171a;
+    color: #4B1F6F;
     margin-bottom: 9px;
 }
 
@@ -113,7 +114,7 @@ h1 {
 
 .campo input:focus {
     background: #ffffff;
-    border-color: #3483fa;
+    border-color: #7c33b8;
 
     box-shadow:
         0 0 0 3px rgba(52, 131, 250, 0.10);
@@ -130,41 +131,50 @@ h1 {
 
 button {
     width: 100%;
-    height: 50px;
+    height: 54px;
 
     border: 0;
-    border-radius: 9px;
+    border-radius: 10px;
 
-    background: #3483fa;
+    background: linear-gradient(
+        90deg,
+        #4B1F6F 0%,
+        #7A32A8 50%,
+        #B963FF 100%
+    );
+
     color: #ffffff;
 
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 750;
 
     cursor: pointer;
 
     margin: 3px 0 30px;
 
     box-shadow:
-        0 4px 10px rgba(52, 131, 250, 0.18);
+        0 5px 14px rgba(75, 31, 111, 0.22);
 
     transition:
-        background 0.18s ease,
         transform 0.18s ease,
-        box-shadow 0.18s ease;
+        box-shadow 0.18s ease,
+        filter 0.18s ease;
 }
 
 button:hover {
-    background: #2874e8;
-
     transform: translateY(-1px);
 
     box-shadow:
-        0 6px 15px rgba(52, 131, 250, 0.22);
+        0 7px 18px rgba(75, 31, 111, 0.28);
+
+    filter: brightness(1.04);
 }
 
 button:active {
     transform: translateY(0);
+
+    box-shadow:
+        0 4px 10px rgba(75, 31, 111, 0.20);
 }
 
 
@@ -222,20 +232,20 @@ button:active {
 
     padding: 28px;
 
-    background: #f0f6ff;
+    background: #f6effa;
 
-    border: 1px solid #dceaff;
+    border: 1px solid #e4d3ee;
 
     box-shadow: none;
 }
 
 .resultado.principal span {
-    color: #4c75aa;
+    color: #76558d;
     font-size: 13px;
 }
 
 .resultado.principal strong {
-    color: #2167c7;
+    color: #4B1F6F;
     font-size: 38px;
     font-weight: 800;
     letter-spacing: -1px;
@@ -258,7 +268,7 @@ button:active {
 #lucroTotal,
 #roiReal,
 #margemReal {
-    color: #21834a;
+    color: #b963ff;
 }
 
 
@@ -403,7 +413,152 @@ button:active {
 }
 .logo {
     display: block;
-    width: 160px;
+    width: 190px;
     height: auto;
     margin: 0 auto 20px;
+}
+/* ==============================
+   MODO ESCURO AUTOMÁTICO
+============================== */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #17121d;
+        color: #f5f1f8;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+
+    .subtitle {
+        color: #b9adbF;
+    }
+
+    .card {
+        background: #211a29;
+        border-color: #33263d;
+        box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.20);
+    }
+
+    .card h2 {
+        color: #f3edf7;
+    }
+
+    .campo label {
+        color: #cfc3d7;
+    }
+
+    .campo input {
+        background: #19141f;
+        border-color: #3b2e45;
+        color: #ffffff;
+    }
+
+    .campo input:hover {
+        background: #211a29;
+        border-color: #584366;
+    }
+
+    .campo input:focus {
+        background: #211a29;
+        border-color: #B963FF;
+
+        box-shadow:
+            0 0 0 3px rgba(185, 99, 255, 0.12);
+    }
+
+    .campo input::placeholder {
+        color: #776b80;
+    }
+
+    .resultado {
+        background: #211a29;
+        border-color: #33263d;
+
+        box-shadow:
+            0 3px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    .resultado span {
+        color: #a99cad;
+    }
+
+    .resultado strong {
+        color: #f5f1f8;
+    }
+
+    .resultado.principal {
+        background: #291d35;
+        border-color: #49345a;
+    }
+
+    .resultado.principal span {
+        color: #c3a9d4;
+    }
+
+    .resultado.principal strong {
+        color: #B963FF;
+    }
+
+    #precoRealResultado {
+        color: #f5f1f8;
+    }
+
+    #diferencaPreco {
+        color: #B963FF;
+    }
+
+    #lucro,
+    #lucroTotal,
+    #roiReal,
+    #margemReal {
+        color: #B963FF;
+    }
+
+    .aviso {
+        background: #29221a;
+        border-color: #51412a;
+        color: #d8c9ad;
+    }
+
+    .aviso strong {
+        color: #f0dfbd;
+    }
+
+    .rodape {
+        color: #756b7b;
+    }
+
+    .rodape a {
+        color: #9685a0;
+    }
+
+    .rodape a:hover {
+        color: #B963FF;
+    }
+}
+/* ==============================
+   CAMPOS COM R$
+============================== */
+
+.input-moeda {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-moeda span {
+    position: absolute;
+    left: 13px;
+    color: #7b8188;
+    font-size: 14px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.input-moeda input {
+    padding-left: 38px;
 }
